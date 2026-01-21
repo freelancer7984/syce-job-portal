@@ -17,10 +17,13 @@ body {
   color: #22c55e;
 }
 
-.navbar a {
+.navbar a, .navbar button {
   color: white;
   margin-left: 20px;
-  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .hero {
@@ -53,40 +56,31 @@ body {
   padding: 30px;
 }
 
-.stats div {
-  text-align: center;
-}
-
 .jobs {
-  max-width: 800px;
+  max-width: 700px;
   margin: auto;
   padding: 30px;
 }
 
 .job-card {
   background: white;
-  padding: 20px;
-  margin-bottom: 15px;
+  padding: 15px;
+  margin-bottom: 10px;
   border-radius: 6px;
 }
 
-.job-card span {
-  display: inline-block;
-  margin: 10px 0;
-  color: #22c55e;
-}
-
-.job-card button {
-  background: #111827;
-  color: white;
+.apply-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #22c55e;
   border: none;
-  padding: 8px 15px;
+  color: white;
 }
 
 .login-container {
   background: white;
   width: 320px;
-  margin: 120px auto;
+  margin: 100px auto;
   padding: 25px;
   text-align: center;
   border-radius: 6px;
@@ -96,4 +90,17 @@ body {
   width: 90%;
   padding: 10px;
   margin: 10px 0;
+}
+
+.hint {
+  font-size: 13px;
+  color: #555;
+}
+
+.footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
 }
