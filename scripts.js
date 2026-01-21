@@ -1,3 +1,4 @@
+// LOGIN SYSTEM
 const loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
@@ -9,10 +10,14 @@ if (loginForm) {
     const msg = document.getElementById("loginMsg");
 
     if (u === "student" && p === "1234") {
-      msg.style.color = "green";
-      msg.innerText = "Login successful";
-      setTimeout(() => location.href = "jobs.html", 1000);
-    } else {
+      localStorage.setItem("role", "student");
+      location.href = "jobs.html";
+    } 
+    else if (u === "admin" && p === "admin123") {
+      localStorage.setItem("role", "admin");
+      location.href = "jobs.html";
+    } 
+    else {
       msg.style.color = "red";
       msg.innerText = "Invalid credentials";
     }
