@@ -1,88 +1,93 @@
 body {
-font-family: Arial, sans-serif;
-background: #f4f4f4;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
 }
 
-
-.navbar {
-background: #0A6FB5;
-color: white;
-padding: 15px;
-display: flex;
-justify-content: space-between;
+.header {
+  background: #0a66c2;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-.navbar ul {
-list-style: none;
-display: flex;
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+.logo span {
+  color: #ffdd00;
 }
 
-
-.navbar ul li {
-margin-left: 15px;
+.header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
 }
-
-
-.navbar a {
-color: white;
-text-decoration: none;
-}
-
 
 .hero {
-text-align: center;
-padding: 60px;
-background: white;
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
 }
 
-
-.hero input {
-padding: 10px;
-width: 250px;
+.hero h1 span {
+  color: #0a66c2;
 }
 
-
-.hero button {
-padding: 10px;
-background: #0A6FB5;
-color: white;
-border: none;
+.search-box {
+  margin-top: 20px;
 }
 
-
-.jobs-container {
-padding: 20px;
+.search-box input {
+  padding: 12px;
+  width: 260px;
 }
 
+.search-box button {
+  padding: 12px 20px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+}
+
+.jobs-section {
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+}
 
 .job-card {
-background: white;
-padding: 15px;
-margin-bottom: 15px;
-border-radius: 5px;
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 6px;
 }
-
 
 .job-card button {
-background: green;
-color: white;
-border: none;
-padding: 8px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  padding: 8px 14px;
 }
-
 
 .login-box {
-background: white;
-width: 300px;
-margin: 100px auto;
-padding: 20px;
-text-align: center;
+  background: white;
+  width: 320px;
+  margin: 120px auto;
+  padding: 25px;
+  text-align: center;
+  border-radius: 6px;
 }
 
-
 .login-box input {
-width: 90%;
-margin: 10px 0;
-padding: 8px;
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#loginMsg {
+  margin-top: 10px;
 }
