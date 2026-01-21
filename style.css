@@ -1,27 +1,23 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f6f8;
+  background: #f6f8fa;
 }
 
-.header {
-  background: #0a66c2;
-  padding: 15px 30px;
+.navbar {
+  background: #111827;
+  color: white;
+  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
-  color: white;
-  font-size: 22px;
-  font-weight: bold;
-}
 .logo span {
-  color: #ffdd00;
+  color: #22c55e;
 }
 
-.header nav a {
+.navbar a {
   color: white;
   margin-left: 20px;
   text-decoration: none;
@@ -33,30 +29,38 @@ body {
   background: white;
 }
 
-.hero h1 span {
-  color: #0a66c2;
-}
-
-.search-box {
-  margin-top: 20px;
+.hero span {
+  color: #22c55e;
 }
 
 .search-box input {
   padding: 12px;
-  width: 260px;
+  width: 200px;
+  margin: 5px;
 }
 
 .search-box button {
   padding: 12px 20px;
-  background: #0a66c2;
-  color: white;
+  background: #22c55e;
   border: none;
+  color: white;
 }
 
-.jobs-section {
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
   padding: 30px;
-  max-width: 700px;
+}
+
+.stats div {
+  text-align: center;
+}
+
+.jobs {
+  max-width: 800px;
   margin: auto;
+  padding: 30px;
 }
 
 .job-card {
@@ -66,14 +70,20 @@ body {
   border-radius: 6px;
 }
 
-.job-card button {
-  background: #0a66c2;
-  color: white;
-  border: none;
-  padding: 8px 14px;
+.job-card span {
+  display: inline-block;
+  margin: 10px 0;
+  color: #22c55e;
 }
 
-.login-box {
+.job-card button {
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+}
+
+.login-container {
   background: white;
   width: 320px;
   margin: 120px auto;
@@ -82,12 +92,8 @@ body {
   border-radius: 6px;
 }
 
-.login-box input {
+.login-container input {
   width: 90%;
   padding: 10px;
   margin: 10px 0;
-}
-
-#loginMsg {
-  margin-top: 10px;
 }
