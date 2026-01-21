@@ -1,3 +1,8 @@
+// HOME SEARCH
+function goToJobs() {
+  window.location.href = "jobs.html";
+}
+
 // LOGIN SYSTEM
 const loginForm = document.getElementById("loginForm");
 
@@ -11,11 +16,15 @@ if (loginForm) {
 
     if (u === "student" && p === "1234") {
       localStorage.setItem("role", "student");
-      location.href = "jobs.html";
+      msg.style.color = "green";
+      msg.innerText = "Student login successful";
+      setTimeout(() => location.href = "jobs.html", 1000);
     } 
     else if (u === "admin" && p === "admin123") {
       localStorage.setItem("role", "admin");
-      location.href = "jobs.html";
+      msg.style.color = "green";
+      msg.innerText = "Admin login successful";
+      setTimeout(() => location.href = "jobs.html", 1000);
     } 
     else {
       msg.style.color = "red";
@@ -23,6 +32,8 @@ if (loginForm) {
     }
   });
 }
+
+// JOB SEARCH
 function filterJobs() {
   const input = document.getElementById("searchJob").value.toLowerCase();
   const jobs = document.getElementsByClassName("job-card");
@@ -33,4 +44,13 @@ function filterJobs() {
   }
 }
 
+// APPLY JOB
+function applyJob() {
+  alert("Application submitted successfully!");
+}
 
+// LOGOUT
+function logout() {
+  localStorage.clear();
+  location.href = "login.html";
+}
