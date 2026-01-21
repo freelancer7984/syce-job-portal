@@ -8,47 +8,36 @@
 </head>
 <body>
 
-
-<header>
-<nav class="navbar">
-<h2>SYCE Jobs</h2>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="login.html">Login</a></li>
-</ul>
-</nav>
+<header class="header">
+  <div class="logo">SYCE<span>Jobs</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+  </nav>
 </header>
 
+<section class="jobs-section">
+  <h2>Latest Job Openings</h2>
 
-<main class="jobs-container">
-<h2>Available Jobs</h2>
-<div id="jobList"></div>
-</main>
+  <div class="job-card">
+    <h3>Web Developer</h3>
+    <p>TCS • Mumbai</p>
+    <button>Apply Now</button>
+  </div>
 
+  <div class="job-card">
+    <h3>Java Developer</h3>
+    <p>Infosys • Pune</p>
+    <button>Apply Now</button>
+  </div>
 
-<script>
-const jobs = [
-{ title: "Web Developer", company: "TCS", location: "Mumbai" },
-{ title: "Java Developer", company: "Infosys", location: "Pune" },
-{ title: "UI/UX Designer", company: "Startup", location: "Remote" }
-];
+  <div class="job-card">
+    <h3>UI/UX Designer</h3>
+    <p>Startup • Remote</p>
+    <button>Apply Now</button>
+  </div>
 
-
-const jobList = document.getElementById("jobList");
-
-
-jobs.forEach(job => {
-const div = document.createElement("div");
-div.className = "job-card";
-div.innerHTML = `<h3>${job.title}</h3>
-<p>${job.company}</p>
-<p>${job.location}</p>
-<button>Apply</button>`;
-jobList.appendChild(div);
-});
-</script>
-
+</section>
 
 </body>
-
 </html>
