@@ -1,28 +1,93 @@
-// LOGIN LOGIC
-const loginForm = document.getElementById("loginForm");
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
 
-if (loginForm) {
-  loginForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+.header {
+  background: #0a66c2;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-    const msg = document.getElementById("loginMsg");
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+.logo span {
+  color: #ffdd00;
+}
 
-    // Dummy credentials (for project)
-    if (username === "student" && password === "1234") {
-      msg.style.color = "green";
-      msg.innerText = "Login successful! Redirecting...";
-      
-      // Save login state
-      localStorage.setItem("loggedIn", "true");
+.header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
 
-      setTimeout(() => {
-        window.location.href = "jobs.html";
-      }, 1000);
-    } else {
-      msg.style.color = "red";
-      msg.innerText = "Invalid username or password!";
-    }
-  });
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+}
+
+.hero h1 span {
+  color: #0a66c2;
+}
+
+.search-box {
+  margin-top: 20px;
+}
+
+.search-box input {
+  padding: 12px;
+  width: 260px;
+}
+
+.search-box button {
+  padding: 12px 20px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+}
+
+.jobs-section {
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.job-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.job-card button {
+  background: #0a66c2;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+}
+
+.login-box {
+  background: white;
+  width: 320px;
+  margin: 120px auto;
+  padding: 25px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.login-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#loginMsg {
+  margin-top: 10px;
 }
