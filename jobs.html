@@ -3,34 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jobs</title>
+<title>Jobs | SYCE</title>
 <link rel="stylesheet" href="style.css">
 </head>
-  <script>
+<body>
+
+<script>
 if (!localStorage.getItem("role")) {
   alert("Please login first");
   window.location.href = "login.html";
 }
 </script>
 
-<body>
-
 <header class="navbar">
-  <div class="logo">Job<span>Portal</span></div>
+  <div class="logo">SYCE<span>Jobs</span></div>
   <nav>
     <a href="index.html">Home</a>
-    <a href="login.html">Login</a>
+    <button onclick="logout()">Logout</button>
   </nav>
 </header>
 
-<input type="text" id="searchJob" placeholder="Search job..." onkeyup="filterJobs()">
+<section class="jobs">
+  <h2>Available Jobs</h2>
 
-<div class="job-card">Web Developer</div>
-<div class="job-card">Java Developer</div>
-<div class="job-card">UI/UX Designer</div>
+  <input type="text" id="searchJob" placeholder="Search job..." onkeyup="filterJobs()">
 
+  <div class="job-card">Web Developer – TCS (Mumbai)</div>
+  <div class="job-card">Java Developer – Infosys (Pune)</div>
+  <div class="job-card">UI/UX Designer – Startup (Remote)</div>
+  <div class="job-card">Python Intern – Wipro (Bangalore)</div>
 
+  <button class="apply-btn" onclick="applyJob()">Apply Selected Job</button>
+</section>
+
+<footer class="footer">
+  <p>SYCE Job Portal © 2026</p>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
 </html>
-
-
