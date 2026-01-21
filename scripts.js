@@ -23,3 +23,14 @@ if (loginForm) {
     }
   });
 }
+function filterJobs() {
+  const input = document.getElementById("searchJob").value.toLowerCase();
+  const jobs = document.getElementsByClassName("job-card");
+
+  for (let job of jobs) {
+    job.style.display = job.innerText.toLowerCase().includes(input)
+      ? "block" : "none";
+  }
+}
+
+
