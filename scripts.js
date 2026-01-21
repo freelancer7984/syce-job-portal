@@ -1,14 +1,5 @@
-// SEARCH
-const searchForm = document.getElementById("searchForm");
-if (searchForm) {
-  searchForm.addEventListener("submit", e => {
-    e.preventDefault();
-    window.location.href = "jobs.html";
-  });
-}
-
-// LOGIN
 const loginForm = document.getElementById("loginForm");
+
 if (loginForm) {
   loginForm.addEventListener("submit", e => {
     e.preventDefault();
@@ -19,7 +10,7 @@ if (loginForm) {
 
     if (u === "student" && p === "1234") {
       msg.style.color = "green";
-      msg.innerText = "Login successful!";
+      msg.innerText = "Login successful";
       setTimeout(() => location.href = "jobs.html", 1000);
     } else {
       msg.style.color = "red";
