@@ -28,13 +28,25 @@ if (!localStorage.getItem("role")) {
 
   <input type="text" id="searchJob" placeholder="Search job..." onkeyup="filterJobs()">
 
-  <div class="job-card">Web Developer – TCS (Mumbai)</div>
-  <div class="job-card">Java Developer – Infosys (Pune)</div>
-  <div class="job-card">UI/UX Designer – Startup (Remote)</div>
-  <div class="job-card">Python Intern – Wipro (Bangalore)</div>
+  <div class="job-card" onclick="selectJob(this)">
+    Web Developer – TCS (Mumbai)
+  </div>
+
+  <div class="job-card" onclick="selectJob(this)">
+    Java Developer – Infosys (Pune)
+  </div>
+
+  <div class="job-card" onclick="selectJob(this)">
+    UI/UX Designer – Startup (Remote)
+  </div>
+
+  <div class="job-card" onclick="selectJob(this)">
+    Python Intern – Wipro (Bangalore)
+  </div>
 
   <button class="apply-btn" onclick="applyJob()">Apply Selected Job</button>
 </section>
+
 
 <footer class="footer">
   <p>SYCE Job Portal © 2026</p>
@@ -43,3 +55,4 @@ if (!localStorage.getItem("role")) {
 <script src="scripts.js"></script>
 </body>
 </html>
+
