@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs | SYCE</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<header>
+<nav class="navbar">
+<h2>SYCE Jobs</h2>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="login.html">Login</a></li>
+</ul>
+</nav>
+</header>
+
+
+<main class="jobs-container">
+<h2>Available Jobs</h2>
+<div id="jobList"></div>
+</main>
+
+
+<script>
+const jobs = [
+{ title: "Web Developer", company: "TCS", location: "Mumbai" },
+{ title: "Java Developer", company: "Infosys", location: "Pune" },
+{ title: "UI/UX Designer", company: "Startup", location: "Remote" }
+];
+
+
+const jobList = document.getElementById("jobList");
+
+
+jobs.forEach(job => {
+const div = document.createElement("div");
+div.className = "job-card";
+div.innerHTML = `<h3>${job.title}</h3>
+<p>${job.company}</p>
+<p>${job.location}</p>
+<button>Apply</button>`;
+jobList.appendChild(div);
+});
+</script>
+
+
+</body>
+</html>
