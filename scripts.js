@@ -54,3 +54,28 @@ function logout() {
   localStorage.clear();
   location.href = "login.html";
 }
+
+let selectedJob = null;
+
+// Select job
+function selectJob(element) {
+  // Remove previous selection
+  const jobs = document.getElementsByClassName("job-card");
+  for (let job of jobs) {
+    job.classList.remove("selected");
+  }
+
+  // Add selection
+  element.classList.add("selected");
+  selectedJob = element.innerText;
+}
+
+// Apply job
+function applyJob() {
+  if (!selectedJob) {
+    alert("Please select a job first!");
+    return;
+  }
+
+  alert("Application submitted for:\n" + selectedJob);
+}
